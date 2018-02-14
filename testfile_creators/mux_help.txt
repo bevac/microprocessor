@@ -1,0 +1,25 @@
+--------------------------------------------------------------------------------
+----------------------------- MUX TESTFILE CREATOR -----------------------------
+--------------------------------------------------------------------------------
+
+This program creates a test file for a general multiplexer.
+At the beginning of the generated file the number of select lines an the bus 
+size are printed as integers in the first line. (Have to be set correctly
+in the testbench.)
+
+First a fixed test is performed:
+Every input line gets a different value (numbering starting from zero).
+The bus must have possibility to display enough different values (otherwise only 
+the random check is performed). Then the select line is iterated through all 
+possibilities. According to the select line the correct output is chosen.
+
+Then a random check is performed:
+Every mux input is generated randomly and also the select lines are set randomly.
+
+
+Output line example for 2 select lines and 8 bit bus size:
+
+00000001 00000010 00000011 00000100 01 00000010
+IN0      IN1      IN2      IN3     SEL OUTPUT
+
+as SEL = 01 at the output IN1 appears as output

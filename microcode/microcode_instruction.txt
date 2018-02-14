@@ -1,0 +1,18 @@
++------------------------------------------------------------------------------+
+|/////////////////////////////     MICROCODE      /////////////////////////////|
++------------------------------------------------------------------------------+
+
+The Excel file contains the complete implemented microcode. The macro 
+"CreateBitFile" is used to create a binary version of the microcode
+that is used to program the ROM of the microprocessor correctly.
+
+To adapt the code some things are important:
+- the script uses absolute column numbers
+- the start point is the row containing "POWER UP" 
+- every row address must be included
+- address ranges are only included for rows containing 'X' characters (only
+  the first column containing the coding is checked, and if it is an 'X' it 
+  is assumed that the rest of the row contains only 'X' characters - the
+  row is replaced by a defined pattern)
+
+To change some behaviour the VBA script has to be adapted.

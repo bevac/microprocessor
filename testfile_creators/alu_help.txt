@@ -1,0 +1,147 @@
+--------------------------------------------------------------------------------
+----------------------------- ALU TESTFILE CREATOR -----------------------------
+--------------------------------------------------------------------------------
+
+This program creates a test file for an arithmetic logic unit of choosable 
+bit-size (minimum 4). At the beginning of the generated file the bit size is 
+printed as an integer in the first line. All example outputs are given for 8 
+bit.
+
+For the test some defines (represented in binary) are created 
+( (bit_size - 1) to 0 ):
+MAX:    11..11
+MAX_1:  11..10 (MAX - 1)
+ZERO:   00..00
+ONE:    00..01
+FOUR:   00..0100
+FIRST:  10..00
+MIX:    010101..
+
+First a fixed pretest test is performed to make sure that the setup for the
+actual fixed test is working correctly:
+
+In VIVADO Simulator it is unfortunately not possible to use internal variables
+of a unit inside a testbench (they can only be viewed in the Waveform Viewer). 
+Consequently it is actually not possible to access carry and overflow flag 
+directly. But to make testing easier they were also set as outputs (but left
+as open ports in the final design).
+Every operation that should be tested is preloaded with two different status 
+flags using two operations:
+                    NZVC
+ALUout <- NOT(MAX)  0101
+ALUout <- rol(MIX)  1010
+
+After this two operations all flag update operations are checked if they work
+correctly loading ALU_A with ZERO and also with MAX. After that the pretest
+is finished. ZERO and MAX are chosen as it is the best way to see which bits
+changed from 0 to 1 or from 1 to 0. When ALU_A is ZERO ALU_B is MAX and
+visa versa.
+
+Here all operations that are performed for the pretest:
+-- For the first three operations it can be checked if the status flags toggle
+-- correctly.
+ALUout <- NOT(MAX)
+ALUout <- rol(MIX)
+ALUout <- NOT(MAX)
+-- The rest of the pretest is tested automatically.
+-- Now the update functions are tested for NOT(MAX). The operation updating
+-- all status bits is used after each other operation to check if no other
+-- status bits have been changed by the operation itself.
+ALUout <- ZERO°(N,Z,V,C)
+ALUout <- MAX°(N,Z,V,C) 
+ALUout <- ZERO°(N,Z,V,C)
+
+ALUout <- ZERO°(N,Z,V)
+ALUout <- MAX°(N,Z,V) 
+ALUout <- ZERO°(N,Z,V)
+  
+ALUout <- ZERO°(N,Z,V,C)
+ALUout <- MAX°(N,Z,V,C)   
+
+ALUout <- ZERO°(N,Z,C)
+ALUout <- MAX°(N,Z,C)
+ALUout <- ZERO°(N,Z,C)
+   
+ALUout <- ZERO°(N,Z,V,C)
+ALUout <- MAX°(N,Z,V,C)   
+
+ALUout <- ZERO°(Z)
+ALUout <- MAX°(Z)  
+ALUout <- ZERO°(Z)
+ 
+ALUout <- ZERO°(N,Z,V,C)
+ALUout <- MAX°(N,Z,V,C)  
+ 
+ALUout <- ZERO°(C)
+ALUout <- MAX°(C)
+ALUout <- ZERO°(C)
+ 
+ALUout <- ZERO°(N,Z,V,C)
+ALUout <- MAX°(N,Z,V,C) 
+-- the same update functions are also checked once again after rol(MIX)   
+ALUout <- rol(MIX)
+Same flag tests...
+
+
+Now the pretest is finished and the actual fixed test starts. Therefore 
+every tested operation is tested using this cycle:
+1  ALUout <- rol(MIX)
+2  Operation to test
+3  ALUout <- ZERO°(N,Z,V,C)
+4  ALUout <- MAX°(N,Z,V,C)
+5  ALUout <- NOT(MAX)
+6  Operation to test
+7  ALUout <- ZERO°(N,Z,V,C)
+8  ALUout <- MAX°(N,Z,V,C)
+
+There is standard-set of combinations for ALU_A and ALU B:
+1 ALU_A: ZERO	ALU_B: FOUR
+2 ALU_A: MAX	ALU_B: FOUR
+3 ALU_A: ONE	ALU_B: FOUR
+4 ALU_A: FIRST	ALU_B: FOUR
+
+Every operation of the standard-set is used for an operation cycle for
+this select operations:
+0 ALUout <- ALU_A
+1 ALUout <- NOT(ALU_A)
+6 C <- 0 (ALUout <- MAX)
+7 C <- 1 (ALUout <- MAX)
+13-15 -- (ALUout <- MAX) -- actually nothing happens (but some output has to be)
+
+For the not mentioned alu-operations (except 8-12, which are the flag update 
+operations that already have been checked) there a special test-set is used:
+
+2 ALUout <- ALU_A + ALU_B + C
+    1 ALU_A: ZERO   ALU_B: ZERO
+    2 ALU_A: MAX    ALU_B: MAX 
+    3 ALU_A: ZERO   ALU_B: MAX 
+    4 ALU_A: ONE    ALU_B: FOUR 
+    5 ALU_A: MAX-1  ALU_B: MAX-1  
+3 ALUout <- ALU_A AND ALU_B
+    1 ALU_A: MAX    ALU_B: FOUR
+    2 ALU_A: ZERO   ALU_B: MAX 
+    3 ALU_A: MAX    ALU_B: MAX-1
+4 ALUout <- rol(ALU_A)
+    1 ALU_A: FIRST  ALU_B: FOUR
+    2 ALU_A: FOUR   ALU_B: MAX 
+5 ALUout <- ror(ALU_A)
+    1 ALU_A: ONE    ALU_B: FOUR
+    2 ALU_A: FOUR   ALU_B: MAX
+    3 ALU_A: FIRST  ALU_B: FOUR
+
+
+After the fixed test a random test is performed. Therefore randomly values for
+ALU_A, ALU_B and the alu-operation (0-7 or 13-15) are determined. After each 
+operation again random values for ALU_A and ALU_B are chosen but choosing an
+alu-operation between 8-12, which are the flag update operations. Consequently
+each random test consists out of one operation and then one flag check.
+
+
+The output-file for one ALU-operation looks like this (example):
+00100100 00010000 01 11011011 1001
+ALU_A  ALU_B   SEL ALUout   NZVC
+
+
+As SEL=01 (NOT(ALU_A)) the output is the inversion of ALU_A and
+the corresponding bits for N, Z, V and C are set.
+

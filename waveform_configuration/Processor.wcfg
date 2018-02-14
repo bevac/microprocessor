@@ -1,0 +1,503 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="Processor_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="Processor_tb" />
+            <top_module name="datatypes" />
+            <top_module name="functions" />
+            <top_module name="glbl" />
+            <top_module name="processor_sim_parameters" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="388000004fs"></ZoomEndTime>
+      <Cursor1Time time="54085001000fs"></Cursor1Time>
+   </zoom_setting>
+   <WVObjectSize size="36" />
+   <wvobject fp_name="group144" type="group">
+      <obj_property name="label">Simulation Parameters</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/Processor_tb/c_filename_mem_in" type="array">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">c_filename_mem_in[1:20]</obj_property>
+         <obj_property name="ObjectShortName">c_filename_mem_in[1:20]</obj_property>
+         <obj_property name="label">Input RAM File</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Processor_tb/finished_address_condition" type="other">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">finished_address_condition</obj_property>
+         <obj_property name="ObjectShortName">finished_address_condition</obj_property>
+         <obj_property name="label">Address Check Finish?</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Processor_tb/w_end_address" type="other">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">w_end_address</obj_property>
+         <obj_property name="ObjectShortName">w_end_address</obj_property>
+         <obj_property name="label">End Address</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Processor_tb/w_end_address_count" type="other">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">w_end_address_count</obj_property>
+         <obj_property name="ObjectShortName">w_end_address_count</obj_property>
+         <obj_property name="label">End Address Appearence</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Processor_tb/finished_interrupts_condition" type="other">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">finished_interrupts_condition</obj_property>
+         <obj_property name="ObjectShortName">finished_interrupts_condition</obj_property>
+         <obj_property name="label">Interrupt Routine Finish?</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="/Processor_tb/r_CLK" type="logic">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">r_CLK</obj_property>
+      <obj_property name="ObjectShortName">r_CLK</obj_property>
+      <obj_property name="label">Input CLK</obj_property>
+   </wvobject>
+   <wvobject fp_name="group145" type="group">
+      <obj_property name="label">Reset/Interrupt Buttons</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/Processor_tb/r_RESET" type="logic">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">r_RESET</obj_property>
+         <obj_property name="ObjectShortName">r_RESET</obj_property>
+         <obj_property name="label">RESET BUTTON</obj_property>
+         <obj_property name="CustomSignalColor">#808080</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Processor_tb/r_INTERRUPT[1]" type="logic">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">[1]</obj_property>
+         <obj_property name="ObjectShortName">[1]</obj_property>
+         <obj_property name="label">INT 1 BUTTON</obj_property>
+         <obj_property name="CustomSignalColor">#808080</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Processor_tb/r_INTERRUPT[2]" type="logic">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">[2]</obj_property>
+         <obj_property name="ObjectShortName">[2]</obj_property>
+         <obj_property name="label">INT 2 BUTTON</obj_property>
+         <obj_property name="CustomSignalColor">#808080</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="/Processor_tb/uut/w_main_clk" type="logic">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">w_main_clk</obj_property>
+      <obj_property name="ObjectShortName">w_main_clk</obj_property>
+      <obj_property name="label">Virtual Input Clock</obj_property>
+      <obj_property name="CustomSignalColor">#00FF00</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Processor_tb/uut/w_clks[1]" type="logic">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">[1]</obj_property>
+      <obj_property name="ObjectShortName">[1]</obj_property>
+      <obj_property name="label">CLK 1</obj_property>
+      <obj_property name="CustomSignalColor">#FF0000</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Processor_tb/uut/w_clks[2]" type="logic">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">[2]</obj_property>
+      <obj_property name="ObjectShortName">[2]</obj_property>
+      <obj_property name="label">CLK 2</obj_property>
+      <obj_property name="CustomSignalColor">#FFA500</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Processor_tb/uut/w_clks[3]" type="logic">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">[3]</obj_property>
+      <obj_property name="ObjectShortName">[3]</obj_property>
+      <obj_property name="label">CLK 3</obj_property>
+      <obj_property name="CustomSignalColor">#FF00FF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Processor_tb/uut/w_clks[4]" type="logic">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">[4]</obj_property>
+      <obj_property name="ObjectShortName">[4]</obj_property>
+      <obj_property name="label">CLK 4</obj_property>
+      <obj_property name="CustomSignalColor">#FFFF00</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Processor_tb/uut/w_clks[5]" type="logic">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">[5]</obj_property>
+      <obj_property name="ObjectShortName">[5]</obj_property>
+      <obj_property name="label">CLK 5</obj_property>
+      <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Processor_tb/w_rd" type="logic">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">w_rd</obj_property>
+      <obj_property name="ObjectShortName">w_rd</obj_property>
+      <obj_property name="label">RD</obj_property>
+      <obj_property name="CustomSignalColor">#FF0000</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Processor_tb/w_wr" type="logic">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">w_wr</obj_property>
+      <obj_property name="ObjectShortName">w_wr</obj_property>
+      <obj_property name="label">WR</obj_property>
+      <obj_property name="CustomSignalColor">#FF0000</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Processor_tb/w_address" type="array">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">w_address[15:0]</obj_property>
+      <obj_property name="ObjectShortName">w_address[15:0]</obj_property>
+      <obj_property name="label">RAM ADDRESS</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="CustomSignalColor">#FF00FF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Processor_tb/rw_DATA_MEM" type="array">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">rw_DATA_MEM[7:0]</obj_property>
+      <obj_property name="ObjectShortName">rw_DATA_MEM[7:0]</obj_property>
+      <obj_property name="label">RAM DATA LINE</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Processor_tb/uut/r_MIR" type="array">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">r_MIR[39:0]</obj_property>
+      <obj_property name="ObjectShortName">r_MIR[39:0]</obj_property>
+      <obj_property name="label">MIR</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="CustomSignalColor">#FF0000</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Processor_tb/uut/r_A_REG" type="array">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">r_A_REG[7:0]</obj_property>
+      <obj_property name="ObjectShortName">r_A_REG[7:0]</obj_property>
+      <obj_property name="label">A Register</obj_property>
+      <obj_property name="CustomSignalColor">#FFA500</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Processor_tb/uut/r_B_REG" type="array">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">r_B_REG[7:0]</obj_property>
+      <obj_property name="ObjectShortName">r_B_REG[7:0]</obj_property>
+      <obj_property name="label">B Register</obj_property>
+      <obj_property name="CustomSignalColor">#FFA500</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Processor_tb/uut/Communication_inst/r_MAR" type="array">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">r_MAR[15:0]</obj_property>
+      <obj_property name="ObjectShortName">r_MAR[15:0]</obj_property>
+      <obj_property name="label">MAR</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="CustomSignalColor">#FF00FF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Processor_tb/uut/Communication_inst/r_MBR" type="array">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">r_MBR[7:0]</obj_property>
+      <obj_property name="ObjectShortName">r_MBR[7:0]</obj_property>
+      <obj_property name="label">MBR</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="CustomSignalColor">#FFFF00</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Processor_tb/uut/r_MPC" type="array">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">r_MPC[11:0]</obj_property>
+      <obj_property name="ObjectShortName">r_MPC[11:0]</obj_property>
+      <obj_property name="label">MPC</obj_property>
+      <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Processor_tb/uut/w_alu_out" type="array">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">w_alu_out[7:0]</obj_property>
+      <obj_property name="ObjectShortName">w_alu_out[7:0]</obj_property>
+      <obj_property name="label">ALU Output</obj_property>
+   </wvobject>
+   <wvobject fp_name="vbus181" type="vbus">
+      <obj_property name="label">ALU Flags (NZVC)</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+      <wvobject fp_name="/Processor_tb/uut/ALU_inst/r_N_FLAG" type="logic">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">r_N_FLAG</obj_property>
+         <obj_property name="ObjectShortName">r_N_FLAG</obj_property>
+         <obj_property name="label">ALU N Flag</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Processor_tb/uut/ALU_inst/r_Z_FLAG" type="logic">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">r_Z_FLAG</obj_property>
+         <obj_property name="ObjectShortName">r_Z_FLAG</obj_property>
+         <obj_property name="label">ALU Z Flag</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Processor_tb/uut/ALU_inst/r_V_FLAG" type="logic">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">r_V_FLAG</obj_property>
+         <obj_property name="ObjectShortName">r_V_FLAG</obj_property>
+         <obj_property name="label">ALU V Flag</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Processor_tb/uut/ALU_inst/r_C_FLAG" type="logic">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">r_C_FLAG</obj_property>
+         <obj_property name="ObjectShortName">r_C_FLAG</obj_property>
+         <obj_property name="label">ALU C Flag</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="/Processor_tb/uut/w_j_cond" type="logic">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">w_j_cond</obj_property>
+      <obj_property name="ObjectShortName">w_j_cond</obj_property>
+      <obj_property name="label">J (jump condition)</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Processor_tb/uut/r_REGISTERS[8]" type="array">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">[8][7:0]</obj_property>
+      <obj_property name="ObjectShortName">[8][7:0]</obj_property>
+      <obj_property name="label">AC</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="CustomSignalColor">#FFFF00</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="vbus176" type="vbus">
+      <obj_property name="label">PC</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="CustomSignalColor">#FFFF00</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <wvobject fp_name="/Processor_tb/uut/r_REGISTERS[6]" type="array">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">[6][7:0]</obj_property>
+         <obj_property name="ObjectShortName">[6][7:0]</obj_property>
+         <obj_property name="label">PCH</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Processor_tb/uut/r_REGISTERS[7]" type="array">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">[7][7:0]</obj_property>
+         <obj_property name="ObjectShortName">[7][7:0]</obj_property>
+         <obj_property name="label">PCL</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="vbus175" type="vbus">
+      <obj_property name="label">SP</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="CustomSignalColor">#FFFF00</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <wvobject fp_name="/Processor_tb/uut/r_REGISTERS[4]" type="array">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">[4][7:0]</obj_property>
+         <obj_property name="ObjectShortName">[4][7:0]</obj_property>
+         <obj_property name="label">SPH</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Processor_tb/uut/r_REGISTERS[5]" type="array">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">[5][7:0]</obj_property>
+         <obj_property name="ObjectShortName">[5][7:0]</obj_property>
+         <obj_property name="label">SPL</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="/Processor_tb/uut/r_REGISTERS[15]" type="array">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">[15][7:0]</obj_property>
+      <obj_property name="ObjectShortName">[15][7:0]</obj_property>
+      <obj_property name="label">EVENT</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="CustomSignalColor">#FFFF00</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Processor_tb/uut/r_REGISTERS[9]" type="array">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">[9][7:0]</obj_property>
+      <obj_property name="ObjectShortName">[9][7:0]</obj_property>
+      <obj_property name="label">CC</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+      <obj_property name="CustomSignalColor">#FFFF00</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject fp_name="/Processor_tb/uut/r_REGISTERS[9][7]" type="logic">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">[7]</obj_property>
+         <obj_property name="ObjectShortName">[7]</obj_property>
+         <obj_property name="label">-</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Processor_tb/uut/r_REGISTERS[9][6]" type="logic">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">[6]</obj_property>
+         <obj_property name="ObjectShortName">[6]</obj_property>
+         <obj_property name="label">-</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Processor_tb/uut/r_REGISTERS[9][5]" type="logic">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">[5]</obj_property>
+         <obj_property name="ObjectShortName">[5]</obj_property>
+         <obj_property name="label">-</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Processor_tb/uut/r_REGISTERS[9][4]" type="logic">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">[4]</obj_property>
+         <obj_property name="ObjectShortName">[4]</obj_property>
+         <obj_property name="label">INT disabled</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Processor_tb/uut/r_REGISTERS[9][3]" type="logic">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">[3]</obj_property>
+         <obj_property name="ObjectShortName">[3]</obj_property>
+         <obj_property name="label">N</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Processor_tb/uut/r_REGISTERS[9][2]" type="logic">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">[2]</obj_property>
+         <obj_property name="ObjectShortName">[2]</obj_property>
+         <obj_property name="label">Z</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Processor_tb/uut/r_REGISTERS[9][1]" type="logic">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">[1]</obj_property>
+         <obj_property name="ObjectShortName">[1]</obj_property>
+         <obj_property name="label">V</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Processor_tb/uut/r_REGISTERS[9][0]" type="logic">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">[0]</obj_property>
+         <obj_property name="ObjectShortName">[0]</obj_property>
+         <obj_property name="label">C</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="vbus174" type="vbus">
+      <obj_property name="label">XR</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="CustomSignalColor">#FFFF00</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <wvobject fp_name="/Processor_tb/uut/r_REGISTERS[2]" type="array">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">[2][7:0]</obj_property>
+         <obj_property name="ObjectShortName">[2][7:0]</obj_property>
+         <obj_property name="label">XRH</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Processor_tb/uut/r_REGISTERS[3]" type="array">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">[3][7:0]</obj_property>
+         <obj_property name="ObjectShortName">[3][7:0]</obj_property>
+         <obj_property name="label">XRL</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="vbus173" type="vbus">
+      <obj_property name="label">YR</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="CustomSignalColor">#FFFF00</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <wvobject fp_name="/Processor_tb/uut/r_REGISTERS[0]" type="array">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">[0][7:0]</obj_property>
+         <obj_property name="ObjectShortName">[0][7:0]</obj_property>
+         <obj_property name="label">YRH</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Processor_tb/uut/r_REGISTERS[1]" type="array">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">[1][7:0]</obj_property>
+         <obj_property name="ObjectShortName">[1][7:0]</obj_property>
+         <obj_property name="label">YRL</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="/Processor_tb/uut/r_REGISTERS[14]" type="array">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">[14][7:0]</obj_property>
+      <obj_property name="ObjectShortName">[14][7:0]</obj_property>
+      <obj_property name="label">IR</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="CustomSignalColor">#FFFF00</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="vbus178" type="vbus">
+      <obj_property name="label">EAR</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="CustomSignalColor">#FFFF00</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <wvobject fp_name="/Processor_tb/uut/r_REGISTERS[10]" type="array">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">[10][7:0]</obj_property>
+         <obj_property name="ObjectShortName">[10][7:0]</obj_property>
+         <obj_property name="label">EARH</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Processor_tb/uut/r_REGISTERS[11]" type="array">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">[11][7:0]</obj_property>
+         <obj_property name="ObjectShortName">[11][7:0]</obj_property>
+         <obj_property name="label">EARL</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="vbus179" type="vbus">
+      <obj_property name="label">OPR</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="CustomSignalColor">#FFFF00</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <wvobject fp_name="/Processor_tb/uut/r_REGISTERS[12]" type="array">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">[12][7:0]</obj_property>
+         <obj_property name="ObjectShortName">[12][7:0]</obj_property>
+         <obj_property name="label">OPRH</obj_property>
+      </wvobject>
+      <wvobject fp_name="/Processor_tb/uut/r_REGISTERS[13]" type="array">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">[13][7:0]</obj_property>
+         <obj_property name="ObjectShortName">[13][7:0]</obj_property>
+         <obj_property name="label">OPRL</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="/Processor_tb/uut/r_REGISTERS[16]" type="array">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">[16][7:0]</obj_property>
+      <obj_property name="ObjectShortName">[16][7:0]</obj_property>
+      <obj_property name="label">U</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+      <obj_property name="CustomSignalColor">#FFFF00</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Processor_tb/uut/r_REGISTERS[17]" type="array">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">[17][7:0]</obj_property>
+      <obj_property name="ObjectShortName">[17][7:0]</obj_property>
+      <obj_property name="label">V</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+      <obj_property name="CustomSignalColor">#FFFF00</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Processor_tb/uut/r_REGISTERS[18]" type="array">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">[18][7:0]</obj_property>
+      <obj_property name="ObjectShortName">[18][7:0]</obj_property>
+      <obj_property name="label">W</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+      <obj_property name="CustomSignalColor">#FFFF00</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Processor_tb/uut/r_REGISTERS[19]" type="array">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">[19][7:0]</obj_property>
+      <obj_property name="ObjectShortName">[19][7:0]</obj_property>
+      <obj_property name="label">Z</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+      <obj_property name="CustomSignalColor">#FFFF00</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+</wave_config>

@@ -1,0 +1,19 @@
+FALSE FALSE (do not check memory in the end, perform interrupt routine)
+WAIT 15 us
+INT1 1
+WAIT 10us 
+INT2 1
+WAIT 2us
+INT1 0
+WAIT 15us
+INT2 0
+WAIT 10us
+INT1 1
+WAIT 15us
+RSET 1
+WAIT 12us 
+RSET 0
+INT2 0  
+WAIT 4us
+INT1 0
+WAIT 10us
