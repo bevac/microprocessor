@@ -84,19 +84,19 @@ The addresses 0-15 are reserved for interrupt vectors (the total number of
 used interrupts can be changed). The memory contents look like this:
 
 Addr.   content
-  0       37        JMP-instruction (RESET vector)
+  0       7E        JMP-instruction (RESET vector)
   1     HI(RES)     HI-byte of jump address
   2     LO(RES)     LO-byte of jump address
   3       --        does not matter
-  4       37        JMP-instruction (SWI vector)
+  4       7E        JMP-instruction (SWI vector)
   5     HI(SWI)     HI-byte of jump address
   6     LO(SWI)     LO-byte of jump address 
   7       --        does not matter
-  8       37        JMP-instruction (INT1 vector)
+  8       7E        JMP-instruction (INT1 vector)
   9     HI(INT1)    HI-byte of jump address
  10     LO(INT1)    LO-byte of jump address 
  11       --        does not matter
- 12       37        JMP-instruction (INT2 vector)
+ 12       7E        JMP-instruction (INT2 vector)
  13     HI(INT2)    HI-byte of jump address 
  14     LO(INT2)    LO-byte of jump address 
  15       --        does not matter
@@ -109,7 +109,7 @@ The three other addresses jump to a corresponding routine when an software
 interrupt occurs (SWI) or an external hardware interrupt is triggered
 (INT1 and INT2).
 
-If an interrupt is not used the jump instruction (37) should be replaced by
+If an interrupt is not used the jump instruction (7E) should be replaced by
 the instruction 3B (RTI: return from interrupt). 
 
 By default the hardware interrupts are deactivated and have to be activated
